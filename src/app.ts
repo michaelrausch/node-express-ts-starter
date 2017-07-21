@@ -12,9 +12,8 @@ class ExpressServer {
 
     setupRoutes(){
         let router = express.Router();
-        var index: indexRoute.Index = new indexRoute.Index();
 
-        router.get("/", index.index.bind(index.index));
+        router.get("/", new indexRoute.IndexRoute().index);
 
         this.app.use(router);
     }

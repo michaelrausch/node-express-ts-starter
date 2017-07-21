@@ -13,7 +13,7 @@ gulp.task("clean", function () {
 });
 
 gulp.task("run", function () {
-    run("node ./build/app.js").exec().pipe(gulp.dest("output"))
+    run("node ./build/src/app.js").exec().pipe(gulp.dest("output"))
 });
 
 gulp.task("test", function () {
